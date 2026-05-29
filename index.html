@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jm23bnk</title>
+  <meta name="description" content="Plura quam quod videtur">
+  <meta name="google-site-verification" content="fxKE2W20jgNuVhQhKnkzzh4FLidWyC-iaiIArxEHKRE" />
+
+  <!-- 01011010 01011000 01000110 01111000 01100010 01011000 01000001 00110110 01001100 01111001 00111001 01111000 01011010 01101101 01110100 00110010 01100011 01101101 00111001 01110000 01001100 01101110 01110000 01110011 01100001 01101001 00111001 01101110 01100001 01101010 01001001 01111010 01100101 01010111 01110100 01101111 -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .glow {
+      position: fixed;
+      border-radius: 50%;
+      background: radial-gradient(circle, #1A0033 0%, transparent 65%); /* Colōr impōrtāns */
+      filter: blur(140px);
+      z-index: 0;
+      pointer-events: none;
+      animation: breathe 8s ease-in-out infinite alternate;
+    }
+
+    .glow-tl {
+      width: 90vmax;
+      height: 90vmax;
+      top: -60%;
+      left: -30%;
+      opacity: 0.8;
+    }
+
+    .glow-br {
+      width: 80vmax;
+      height: 80vmax;
+      bottom: -50%;
+      right: -20%;
+      opacity: 0.7;
+      animation-delay: -3s;
+    }
+
+    .glow-l {
+      width: 60vmax;
+      height: 60vmax;
+      top: 30%;
+      left: -45%;
+      opacity: 0.5;
+      animation-delay: -5s;
+    }
+
+    .glow-r {
+      width: 70vmax;
+      height: 70vmax;
+      top: 20%;
+      right: -35%;
+      opacity: 0.4;
+      animation-delay: -2s;
+    }
+
+    .photo-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+    }
+
+    .photo-wrapper img {
+      max-width: 85vw;
+      max-height: 85vh;
+      border-radius: 0;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(26, 0, 51, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-wrapper img:hover {
+      transform: scale(1.015);
+    }
+
+    @keyframes breathe {
+      0%   { opacity: 0.6; }
+      100% { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow glow-tl"></div>
+  <div class="glow glow-br"></div>
+  <div class="glow glow-l"></div>
+  <div class="glow glow-r"></div>
+
+  <div class="photo-wrapper">
+    <img src="Communitas.jpg" alt="Communitas">
+  </div>
+
+</body>
+</html>
